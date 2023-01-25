@@ -1,6 +1,5 @@
 import Todo from './todo.js';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import Delete from '../images/delet-Icon.svg';
+import Delete from '../../images/delet-Icon.svg';
 import deleteEventHandler from './deletHandler.js';
 
 const createEditElementForm = (indexTodo) => {

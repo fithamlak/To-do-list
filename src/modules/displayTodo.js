@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import Edit from '../images/edit-Icon.svg';
+import Edit from '../../images/edit-Icon.svg';
 import updateTodoHandler from './updateTodoHandler.js';
 import createEditElementForm from './editTodo.js';
 

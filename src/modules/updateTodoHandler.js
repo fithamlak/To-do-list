@@ -1,7 +1,6 @@
 import createEditFormElement from './editTodo.js';
 import Todo from './todo.js';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import Edit from '../images/edit-Icon.svg';
+import Edit from '../../images/edit-Icon.svg';
 
 const updateTodoHandler = (e) => {
   e.preventDefault();
