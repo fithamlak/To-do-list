@@ -1,3 +1,5 @@
+import { storeData, retrieveData } from './localStorage.js';
+
 let newTodoArray = [];
 
 export default class Todo {
@@ -7,21 +9,25 @@ export default class Todo {
     this.index = index;
   }
 
+  static getTodo = (index) => {
+    newTodoArray = retrieveData();
+    const todo = newTodoArray.find((x) => x.index.toString() === index.toString());
+    return todo;
+  }
+
   static addTodo = (todo) => {
     const newTodo = new Todo(
       todo.description,
       todo.completed,
       todo.index,
     );
+    newTodoArray = retrieveData();
     newTodoArray.push(newTodo);
-  }
-
-  static getTodo = (index) => {
-    const todo = newTodoArray.find((x) => x.index.toString() === index.toString());
-    return todo;
+    storeData(newTodoArray);
   }
 
   static updateTodo = (todo) => {
+    newTodoArray = retrieveData();
     newTodoArray = newTodoArray.filter((element) => element.index !== todo.index);
     const newTodo = new Todo(
       todo.description,
@@ -29,14 +35,17 @@ export default class Todo {
       todo.index,
     );
     newTodoArray.push(newTodo);
+    storeData(newTodoArray);
   }
 
   static removeTodo = (index) => {
+    newTodoArray = retrieveData();
     newTodoArray = newTodoArray.filter((element) => element.index.toString() !== index.toString());
     const reIndexedArray = [];
     newTodoArray.sort((x, y) => x.index - y.index).forEach((element, index) => {
       reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
     });
+    storeData(reIndexedArray);
     window.location.reload();
   }
 }
