@@ -97,17 +97,23 @@ In order to run this project you need: any functional browser.
 
 ### Setup
 
-Clone this repository to your desired folder:
-cd my-folder git clone [@fithamlak](https://github.com/fithamlak/To-do-list)
+- Copy this link https://github.com/fithamlak/To-do-list
+- Get the directory that you want to clone the repository.
+- Open the command prompt in this directory.
+- Write git clone git@github.com:fithamlak/To-do-list.git
+- Go to the repository folder in your command prompt cd To-do-list.
+- Run npm install to install the dev dependencies for linters and webpacks
+
 
 ### Install
 
-Install this project with 
+run only npm install
 
 ### Usage
 
 To run the project, execute the following command:
-open your live server
+- Go to the file called index.html.
+- Right click Open Live Server.
 
 ### Run tests
 
