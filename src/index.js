@@ -4,7 +4,7 @@ const taskArray = [
   {
     description: 'read webpack',
     completed: true,
-    index: 1,
+    index: 5,
   },
   {
     description: 'read ES6.',
@@ -28,9 +28,10 @@ const desplayToPage = (task) => {
 };
 
 const loadElements = () => {
-  taskArray.forEach((task) => {
-    desplayToPage(task);
-  });
+  taskArray.sort((x, y) => x.index - y.index)
+    .forEach((task) => {
+      desplayToPage(task);
+    });
 };
 
 window.onload = () => {
