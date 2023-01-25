@@ -2,23 +2,7 @@ import './styles.css';
 
 const taskList = document.getElementById('taskList');
 
-const taskArray = [
-  {
-    description: 'read webpack',
-    completed: true,
-    index: 5,
-  },
-  {
-    description: 'read ES6.',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'read React.',
-    completed: false,
-    index: 3,
-  },
-];
+const taskArray = [];
 
 const desplayToPage = (task) => {
   const element = document.createElement('li');
