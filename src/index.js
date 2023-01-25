@@ -1,25 +1,39 @@
 import './styles.css';
-
-const taskList = document.getElementById('taskList');
-
-const taskArray = [];
-
-const desplayToPage = (task) => {
-  const element = document.createElement('li');
-  element.setAttribute('id', task.index);
-  element.innerHTML = `
-  <input type="checkbox" class = "checkbox" ${task.completed ? 'checked' : ''}/>
-  <span>${task.description}</span>`;
-  taskList.appendChild(element);
-};
+import Refresh from './rotate.svg';
+import Enter from './enter.png';
+import { appendToDOM } from './modules/changeDom.js';
+import DesplayElement from './modules/displayTodo.js';
+import { retrieveData } from './modules/localStorage.js';
+import { addTodoForm, addTodoFormHandler } from './modules/addNewTodo.js';
 
 const loadElements = () => {
-  taskArray.sort((x, y) => x.index - y.index)
-    .forEach((task) => {
-      desplayToPage(task);
+  let taskArray = [];
+  taskArray = retrieveData();
+  taskArray
+    .sort((x, y) => x.index - y.index)
+    .forEach((todo) => {
+      const taskElement = DesplayElement(todo);
+      appendToDOM(taskElement);
     });
+};
+
+const loadRefreshIcon = () => {
+  const refreshIcon = document.getElementById('list_refresh');
+  refreshIcon.src = Refresh;
+  refreshIcon.alt = 'refresh';
+  refreshIcon.setAttribute('class', 'header-icon');
+};
+
+const loadEnterIcon = () => {
+  const enterIcon = document.getElementById('enter_newtodo');
+  enterIcon.src = Enter;
+  enterIcon.alt = 'enter';
+  enterIcon.setAttribute('class', 'icon');
 };
 
 window.onload = () => {
   loadElements();
+  loadRefreshIcon();
+  loadEnterIcon();
+  addTodoForm.addEventListener('submit', addTodoFormHandler);
 };
