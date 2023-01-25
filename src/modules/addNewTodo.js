@@ -1,6 +1,7 @@
 import Todo from './todo.js';
 import { appendToDOM } from './changeDom.js';
 import { retrieveData } from './localStorage.js';
+import desplayElement from './displayTodo.js';
 
 export const addTodoForm = document.getElementById('todo-form');
 
@@ -13,6 +14,7 @@ export const addTodoFormHandler = (e) => {
     todosArray.length + 1,
   );
   Todo.addTodo(newTodo);
-  appendToDOM(newTodo);
+  const todoElement = desplayElement(newTodo);
+  appendToDOM(todoElement);
   addTodoForm.reset();
 };
