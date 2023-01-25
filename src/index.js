@@ -32,3 +32,7 @@ const loadElements = () => {
     desplayToPage(task);
   });
 };
+
+window.onload = () => {
+  loadElements();
+};
