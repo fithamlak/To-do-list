@@ -7,10 +7,17 @@
     <title>To Do List</title>
 </head>
 <body>
-    <main>
-        <h1>Today's To Do list</h1>
-        <input type="text" id="add-task" placeholder="Add to your list..." />
-        <ul id="taskList"></ul>
+  <main>
+    <h1>Today's To Do list
+      <img id="list_refresh">
+    </h1>
+    <form action="javascript:void(0);" method="post" type="submit" id="todo-form">
+        <label for="add-todo" id="add-todo-label">
+          <input type="text" id="add-task" placeholder="Add to your list..." />
+          <img id="enter_newtodo" />
+        </label>
+    </form>      
+    <ul id="taskList"></ul>
         <p class="bottom"><a href="#">Clear all completed</a></p>
       </main>
 </body>
