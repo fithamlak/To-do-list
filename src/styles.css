@@ -19,6 +19,7 @@ main {
   display: flex;
   justify-content: space-between;
 }
+
 .top > h1 {
   font-weight: normal;
   padding: 24px;

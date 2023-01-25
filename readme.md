@@ -74,7 +74,8 @@ This project is for an list of awesome books in a webpage
 - List structure
   - Set up a new project with webpack
   - The list appear in order of the index values for each task.
-
+- [ ]**Add and remove items.**
+- - [ ] **full crud oprations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,8 +146,8 @@ N/A
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Interactive list.**
-- [ ] **Add and remove items.**
+- **Interactive list.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
