@@ -1,3 +1,5 @@
+const taskList = document.getElementById('taskList');
+
 const taskArray = [
   {
     description: 'read webpack',
@@ -15,3 +17,18 @@ const taskArray = [
     index: 3,
   },
 ];
+
+const desplayToPage = (task) => {
+  const element = document.createElement('li');
+  element.setAttribute('id', task.index);
+  element.innerHTML = `
+  <input type="checkbox" ${task.completed ? 'checked' : ''}/>
+  <span>${task.description}</span>`;
+  taskList.appendChild(element);
+};
+
+const loadElements = () => {
+  taskArray.forEach((task) => {
+    desplayToPage(task);
+  });
+};
