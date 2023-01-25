@@ -35,9 +35,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 🔬 Awesome-books<a name="about-project"></a>
+# 🔬 To-do-list<a name="about-project"></a>
 
-This project is for an list of awesome books in a webpage
+This project is for to do list application
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -74,7 +74,8 @@ This project is for an list of awesome books in a webpage
 - List structure
   - Set up a new project with webpack
   - The list appear in order of the index values for each task.
-
+- dd and remove items.**
+- full crud oprations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,8 +146,8 @@ N/A
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Interactive list.**
-- [ ] **Add and remove items.**
+- **Interactive list.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
