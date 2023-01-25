@@ -115,6 +115,10 @@ To run the project, execute the following command:
 - Go to the file called index.html.
 - Right click Open Live Server.
 
+  or
+- open terminal from your directory 
+- run `npm start`
+
 ### Run tests
 
 To run tests, run the following command:
