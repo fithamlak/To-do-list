@@ -3,7 +3,8 @@ import Refresh from './rotate.svg';
 import Enter from './enter.png';
 import Todo from './modules/todo.js';
 import { appendToDOM } from './modules/changeDom.js';
-import DesplayElement from './modules/displayTodo.js';
+import createDisplayElement from './modules/displayTodo.js';
+import clearAllCompletedHandler from './modules/clearAllCompleted.js';
 import { retrieveData } from './modules/localStorage.js';
 import { addTodoForm, addTodoFormHandler } from './modules/addNewTodo.js';
 
@@ -13,7 +14,7 @@ const loadElements = () => {
   taskArray
     .sort((x, y) => x.index - y.index)
     .forEach((todo) => {
-      const taskElement = DesplayElement(todo);
+      const taskElement = createDisplayElement(todo);
       appendToDOM(taskElement);
     });
 };
@@ -42,15 +43,26 @@ const loadEnterIcon = () => {
         todosArray.length + 1,
       );
       Todo.addTodo(newTodo);
-      const todoElement = DesplayElement(newTodo);
+      const todoElement = createDisplayElement(newTodo);
       appendToDOM(todoElement);
       addTodoForm.reset();
     }
   });
 };
+
+const loadAfterAllCleared = () => {
+  const paragraph = document.getElementsByTagName('p')[0];
+  const clearAllCompletedLink = document.createElement('a');
+  clearAllCompletedLink.setAttribute('id', 'clear-all-completed');
+  clearAllCompletedLink.setAttribute('href', '/');
+  clearAllCompletedLink.innerText = 'Clear all completed';
+  clearAllCompletedLink.addEventListener('click', clearAllCompletedHandler);
+  paragraph.appendChild(clearAllCompletedLink);
+};
 window.onload = () => {
   loadElements();
   loadRefreshIcon();
   loadEnterIcon();
+  loadAfterAllCleared();
   addTodoForm.addEventListener('submit', addTodoFormHandler);
 };
