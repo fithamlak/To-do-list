@@ -3,8 +3,7 @@ import Todo from './todo.js';
 import Edit from '../../images/edit-Icon.svg';
 import createCheckbox from './newCheckbox.js';
 
-const updateTodoHandler = (e) => {
-  e.preventDefault();
+const updateTodoHandler = () => {
   const inputElement = document.getElementsByClassName('edit-todo-input')[0];
   const formElement = inputElement.parentElement.parentElement;
   const indexTodo = formElement.getAttribute('id');
@@ -20,7 +19,7 @@ const updateTodoHandler = (e) => {
     const displayElement = e.target.parentElement;
     const indexTodo = displayElement.getAttribute('id');
     const editElement = createEditFormElement(indexTodo);
-    editElement.addEventListener('submit', updateTodoHandler);
+    // editElement.addEventListener('submit', updateTodoHandler);
     const todoList = displayElement.parentElement;
     todoList.replaceChild(editElement, displayElement);
   });

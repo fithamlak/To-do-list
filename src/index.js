@@ -7,6 +7,7 @@ import createDisplayElement from './modules/displayTodo.js';
 import clearAllCompletedHandler from './modules/clearAllCompleted.js';
 import { retrieveData } from './modules/localStorage.js';
 import { addTodoForm, addTodoFormHandler } from './modules/addNewTodo.js';
+import updateTodoHandler from './modules/updateTodoHandler.js';
 
 const loadElements = () => {
   let taskArray = [];
@@ -34,7 +35,9 @@ const loadEnterIcon = () => {
   enterIcon.src = Enter;
   enterIcon.alt = 'enter';
   enterIcon.setAttribute('class', 'icon');
+  // add eventlistner for enter key
   enterIcon.addEventListener('click', () => {
+    // if todo is written or add to your list field is not empity
     if (addTodoForm.elements['add-task'].value) {
       const todosArray = retrieveData();
       const newTodo = new Todo(
@@ -46,6 +49,8 @@ const loadEnterIcon = () => {
       const todoElement = createDisplayElement(newTodo);
       appendToDOM(todoElement);
       addTodoForm.reset();
+    } else if (document.getElementsByClassName('edit-todo-input')[0]) { // if add todo is empity and if someone is yousing phone and want to edit a task
+      updateTodoHandler();
     }
   });
 };
