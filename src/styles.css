@@ -29,6 +29,7 @@ main {
 
 .top > img {
   margin: 20px;
+  cursor: pointer;
 }
 
 #add-todo-label {
@@ -78,14 +79,14 @@ ul > li > label {
   margin: 0;
 }
 
-.bottom {
+p {
   background: #f5f5f5;
   padding: 24px;
   display: flex;
   justify-content: center;
 }
 
-.bottom > a {
+p > a:hover {
   text-decoration: none;
   color: #888;
 }
@@ -96,6 +97,8 @@ ul > li > label {
 
 .icon {
   height: 16px;
+  width: 16px;
+  cursor: pointer;
 }
 
 .edit-todo-form {
@@ -114,6 +117,10 @@ ul > li > label {
 .edit-todo-input {
   background: lightyellow;
   border: none;
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 .edit-todo-input:focus {

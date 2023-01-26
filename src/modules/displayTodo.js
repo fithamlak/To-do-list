@@ -1,29 +1,43 @@
 import Edit from '../../images/edit-Icon.svg';
 import updateTodoHandler from './updateTodoHandler.js';
-import createEditElementForm from './editTodo.js';
+import createEditElement from './editTodo.js';
+import createCheckbox from './newCheckbox.js';
 
-const DesplayElement = (todo) => {
-  const element = document.createElement('li');
+const editClickHandler = (e) => {
+  const displayElement = e.target.parentElement;
+  const indexTodo = displayElement.getAttribute('id');
+  const editElement = createEditElement(indexTodo);
+  editElement.addEventListener('submit', updateTodoHandler);
+  const taskList = displayElement.parentElement;
+  taskList.replaceChild(editElement, displayElement);
+};
+
+const createEditIcon = () => {
   const editIcon = new Image();
   editIcon.src = Edit;
   editIcon.setAttribute('class', 'icon');
-  element.setAttribute('id', todo.index);
-  element.innerHTML = `
-    <label>
-      <input class="checkbox" type="checkbox" ${todo.completed ? 'checked' : ''}/>
-      <span>${todo.description}</span>
-    </label
-    `;
-  element.appendChild(editIcon);
-  editIcon.addEventListener('click', (e) => {
-    const displayElement = e.target.parentElement;
-    const indexTodo = displayElement.getAttribute('id');
-    const editElement = createEditElementForm(indexTodo);
-    editElement.addEventListener('submit', updateTodoHandler);
-    const todoList = displayElement.parentElement;
-    todoList.replaceChild(editElement, displayElement);
-  });
-  return element;
+  editIcon.addEventListener('click', editClickHandler);
+  return editIcon;
 };
 
-export default DesplayElement;
+const createDisplayElement = (todo) => {
+  const displayElement = document.createElement('li');
+  displayElement.setAttribute('id', todo.index);
+  const labelElement = document.createElement('label');
+  const checkboxElement = createCheckbox(todo.completed);
+  if (todo.completed) {
+    displayElement.classList.add('completed');
+  } else {
+    displayElement.classList.remove('completed');
+  }
+  labelElement.appendChild(checkboxElement);
+  const descriptionElement = document.createElement('span');
+  descriptionElement.innerText = todo.description;
+  labelElement.appendChild(descriptionElement);
+  displayElement.appendChild(labelElement);
+  const menuElement = createEditIcon();
+  displayElement.appendChild(menuElement);
+  return displayElement;
+};
+
+export default createDisplayElement;
