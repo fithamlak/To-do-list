@@ -29,6 +29,7 @@ main {
 
 .top > img {
   margin: 20px;
+  cursor: pointer;
 }
 
 #add-todo-label {
@@ -96,6 +97,8 @@ ul > li > label {
 
 .icon {
   height: 16px;
+  width: 16px;
+  cursor: pointer;
 }
 
 .edit-todo-form {
