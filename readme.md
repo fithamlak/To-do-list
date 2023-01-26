@@ -74,8 +74,9 @@ This project is for to do list application
 - List structure
   - Set up a new project with webpack
   - The list appear in order of the index values for each task.
-- dd and remove items.**
-- full crud oprations**
+- dd and remove items.
+- full crud oprations
+- full interactive list
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,10 +114,6 @@ run only npm install
 ### Usage
 
 To run the project, execute the following command:
-- Go to the file called index.html.
-- Right click Open Live Server.
-
-  or
 - open terminal from your directory 
 - run `npm start`
 
@@ -146,7 +143,7 @@ N/A
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Interactive list.**
+- drag / drop and sorting functionality will be implemented
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
