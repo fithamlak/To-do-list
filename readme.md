@@ -84,6 +84,7 @@ This project is for to do list application
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://fithamlak.github.io/To-do-list/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
