@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675281668563" clover="3.2.0">
-  <project timestamp="1675281668563" name="All files">
-    <metrics statements="32" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="3" elements="44" coveredelements="19" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
+<coverage generated="1675283462453" clover="3.2.0">
+  <project timestamp="1675283462453" name="All files">
+    <metrics statements="31" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="5" elements="43" coveredelements="27" complexity="0" loc="31" ncloc="31" packages="1" files="2" classes="2"/>
     <file name="changeDom.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\changeDom.js">
-      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="todo.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\todo.js">
-      <metrics statements="27" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="2"/>
+      <metrics statements="26" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="3"/>
       <line num="3" count="1" type="stmt"/>
       <line num="7" count="3" type="stmt"/>
       <line num="8" count="3" type="stmt"/>
@@ -32,13 +32,12 @@
       <line num="37" count="0" type="stmt"/>
       <line num="38" count="0" type="stmt"/>
       <line num="41" count="1" type="stmt"/>
-      <line num="42" count="0" type="stmt"/>
-      <line num="43" count="0" type="stmt"/>
-      <line num="44" count="0" type="stmt"/>
-      <line num="45" count="0" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
       <line num="46" count="0" type="stmt"/>
-      <line num="48" count="0" type="stmt"/>
-      <line num="49" count="0" type="stmt"/>
+      <line num="48" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

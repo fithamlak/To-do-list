@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.7% </span>
+                <span class="strong">56.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/31</span>
+                <span class='fraction'>17/30</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/10</span>
+                <span class='fraction'>3/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">65.38% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/27</span>
+                <span class='fraction'>17/26</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,8 +112,7 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,14 +153,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { storeData, retrieveData } from './localStorage.js';
 &nbsp;
@@ -203,15 +201,14 @@ export default class Todo {
 <span class="cstat-no" title="statement not covered" >    storeData(newTodoArray);</span>
   }
 &nbsp;
-  static removeTodo = <span class="fstat-no" title="function not covered" >(i</span>ndex) =&gt; {
-<span class="cstat-no" title="statement not covered" >    newTodoArray = retrieveData();</span>
-<span class="cstat-no" title="statement not covered" >    newTodoArray = newTodoArray.filter(<span class="fstat-no" title="function not covered" >(e</span>lement) =&gt; <span class="cstat-no" title="statement not covered" >element.index.toString() !== index.toString())</span>;</span>
-    const reIndexedArray = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >    newTodoArray.sort(<span class="fstat-no" title="function not covered" >(x</span>, y) =&gt; <span class="cstat-no" title="statement not covered" >x.index - y.index)</span>.forEach(<span class="fstat-no" title="function not covered" >(e</span>lement, index) =&gt; {</span>
+  static removeTodo = (index) =&gt; {
+    newTodoArray = retrieveData();
+    newTodoArray = newTodoArray.filter(<span class="fstat-no" title="function not covered" >(e</span>lement) =&gt; <span class="cstat-no" title="statement not covered" >element.index.toString() !== index.toString())</span>;
+    const reIndexedArray = [];
+    newTodoArray.sort(<span class="fstat-no" title="function not covered" >(x</span>, y) =&gt; <span class="cstat-no" title="statement not covered" >x.index - y.index)</span>.forEach(<span class="fstat-no" title="function not covered" >(e</span>lement, index) =&gt; {
 <span class="cstat-no" title="statement not covered" >      reIndexedArray.push(new Todo(element.description, element.completed, index + 1));</span>
     });
-<span class="cstat-no" title="statement not covered" >    storeData(reIndexedArray);</span>
-<span class="cstat-no" title="statement not covered" >    window.location.reload();</span>
+    return storeData(reIndexedArray);
   }
 }</pre></td></tr></table></pre>
 
@@ -220,7 +217,7 @@ export default class Todo {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-01T20:01:08.538Z
+                at 2023-02-01T20:31:02.409Z
             </div>
         <script src="prettify.js"></script>
         <script>
