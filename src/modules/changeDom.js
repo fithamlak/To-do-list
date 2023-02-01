@@ -1,5 +1,5 @@
-const todoList = document.getElementById('taskList');
 export const appendToDOM = (todoElement) => {
+  const todoList = document.getElementById('taskList');
   todoList.appendChild(todoElement);
 };
 

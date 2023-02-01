@@ -21,9 +21,9 @@ export default class Todo {
       todo.completed,
       todo.index,
     );
-    newTodoArray = retrieveData();
-    newTodoArray.push(newTodo);
-    storeData(newTodoArray);
+    const testArray = retrieveData();
+    testArray.push(newTodo);
+    return storeData(testArray);
   }
 
   static updateTodo = (todo) => {
