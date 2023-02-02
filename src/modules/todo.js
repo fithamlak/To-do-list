@@ -21,9 +21,9 @@ export default class Todo {
       todo.completed,
       todo.index,
     );
-    newTodoArray = retrieveData();
-    newTodoArray.push(newTodo);
-    storeData(newTodoArray);
+    const testArray = retrieveData();
+    testArray.push(newTodo);
+    return storeData(testArray);
   }
 
   static updateTodo = (todo) => {
@@ -45,7 +45,6 @@ export default class Todo {
     newTodoArray.sort((x, y) => x.index - y.index).forEach((element, index) => {
       reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
     });
-    storeData(reIndexedArray);
-    window.location.reload();
+    return storeData(reIndexedArray);
   }
 }
