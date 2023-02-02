@@ -8,7 +8,6 @@ jest.mock('./localStorage.js');
 const task = new Todo('test', false, 1);
 const taskElement = document.createElement('li');
 document.body.innerHTML = '<div><ul id="taskList"></ul></div>';
-console.log(Todo.addTodo(task));
 // test for add
 describe('add task', () => {
   test('adds a task to storage', () => {
