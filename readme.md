@@ -77,6 +77,7 @@ This project is for to do list application
 - dd and remove items.
 - full crud oprations
 - full interactive list
+- full unit test with jest for add ande remove
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,6 +146,7 @@ N/A
 ## 🔭 Future Features <a name="future-features"></a>
 
 - drag / drop and sorting functionality will be implemented
+- unit test for clear functon will be done
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
