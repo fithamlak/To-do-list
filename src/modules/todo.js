@@ -36,6 +36,7 @@ export default class Todo {
     );
     newTodoArray.push(newTodo);
     storeData(newTodoArray);
+    return storeData(newTodoArray);
   }
 
   static removeTodo = (index) => {
@@ -43,6 +44,20 @@ export default class Todo {
     newTodoArray = newTodoArray.filter((element) => element.index.toString() !== index.toString());
     const reIndexedArray = [];
     newTodoArray.sort((x, y) => x.index - y.index).forEach((element, index) => {
+      reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
+    });
+    return storeData(reIndexedArray);
+  }
+
+  static clearAllCompletedTask = (tasksArray) => {
+    let tasks = tasksArray;
+    tasks.forEach((element) => {
+      if (element.completed) {
+        tasks = tasks.filter((task) => task.index.toString() !== element.index.toString());
+      }
+    });
+    const reIndexedArray = [];
+    tasks.sort((x, y) => x.index - y.index).forEach((element, index) => {
       reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
     });
     return storeData(reIndexedArray);

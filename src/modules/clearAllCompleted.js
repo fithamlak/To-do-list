@@ -1,20 +1,13 @@
-import { retrieveData, storeData } from './localStorage.js';
+import { retrieveData } from './localStorage.js';
 import Todo from './todo.js';
+import { removeAllCompletedFromDOM } from './changeDom.js';
 
 const clearAllCompletedHandler = (e) => {
   e.preventDefault();
-  let tasks = retrieveData();
-  tasks.forEach((element) => {
-    if (element.completed) {
-      tasks = tasks.filter((todo) => todo.index.toString() !== element.index.toString());
-    }
-  });
-  const IndexChengedArray = [];
-  tasks.sort((x, y) => x.index - y.index).forEach((element, index) => {
-    IndexChengedArray.push(new Todo(element.description, element.completed, index + 1));
-  });
-  storeData(IndexChengedArray);
-  window.location.reload();
+  const tasks = retrieveData();
+  Todo.clearAllCompletedTask(tasks);
+  const taskElements = document.querySelectorAll('#taskList li');
+  removeAllCompletedFromDOM(taskElements);
 };
 
 export default clearAllCompletedHandler;
