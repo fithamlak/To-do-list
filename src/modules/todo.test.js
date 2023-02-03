@@ -53,3 +53,13 @@ test('Update task different description', () => {
   const { description } = testArray[0];
   expect(description).not.toBe(taskArr[0].description);
 });
+
+it('task description is updated', () => {
+  //  Arrange
+  // const task = new Todo('updatedDescription', false, 1);
+  // Act
+  const testArray = Todo.updateTodo({ description: 'updatedDescription', completed: false, index: 1 });
+  // Assert
+  const { description } = testArray[0];
+  expect(description).toBe('updatedDescription');
+});
