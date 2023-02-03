@@ -83,3 +83,18 @@ describe('edit task completion using  checkbox', () => {
     expect(completed).not.toBeFalsy();
   });
 });
+
+describe('clear all completed', () => {
+  // Arrange
+  const task1 = new Todo('test1', true, 1);
+  const task2 = new Todo('test2', true, 2);
+  const task3 = new Todo('test3', true, 3);
+  const task4 = new Todo('test3', true, 4);
+  const modifiedArray = [task1, task2, task3, task4];
+  it('clear All Four(4) completed tasks in local storage', () => {
+    // Act
+    const newUpdatedArr = Todo.clearAllCompletedTask(modifiedArray);
+    // Assert
+    expect(newUpdatedArr).toHaveLength(0);
+  });
+});

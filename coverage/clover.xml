@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675385564498" clover="3.2.0">
-  <project timestamp="1675385564498" name="All files">
-    <metrics statements="32" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="6" elements="44" coveredelements="34" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
+<coverage generated="1675388891297" clover="3.2.0">
+  <project timestamp="1675388891298" name="All files">
+    <metrics statements="45" coveredstatements="37" conditionals="4" coveredconditionals="1" methods="19" coveredmethods="9" elements="68" coveredelements="47" complexity="0" loc="45" ncloc="45" packages="1" files="2" classes="2"/>
     <file name="changeDom.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\changeDom.js">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="13" count="0" type="stmt"/>
     </file>
     <file name="todo.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\todo.js">
-      <metrics statements="27" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="4"/>
+      <metrics statements="36" coveredstatements="31" conditionals="2" coveredconditionals="1" methods="15" coveredmethods="7"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="7" count="6" type="stmt"/>
-      <line num="8" count="6" type="stmt"/>
-      <line num="9" count="6" type="stmt"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
       <line num="13" count="0" type="stmt"/>
       <line num="14" count="0" type="stmt"/>
@@ -39,6 +43,15 @@
       <line num="46" count="1" type="stmt"/>
       <line num="47" count="0" type="stmt"/>
       <line num="49" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="55" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="56" count="10" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

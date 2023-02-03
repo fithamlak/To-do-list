@@ -1,10 +1,11 @@
 import Todo from './todo.js';
+import { removeFromDOM } from './changeDom.js';
 
 const deletEventHandler = (e) => {
   const todo = e.target.parentElement;
   const indexTodo = todo.getAttribute('id');
   Todo.removeTodo(indexTodo);
-  window.location.reload();
+  removeFromDOM(todo);
 };
 
 export default deletEventHandler;
