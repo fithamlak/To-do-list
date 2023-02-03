@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import Todo from './todo.js';
-import { appendToDOM, removeFromDOM } from './changeDom.js';
+import { appendToDOM, removeFromDOM, removeAllCompletedFromDOM  } from './changeDom.js';
 
 jest.mock('./localStorage.js');
 const task = new Todo('test', false, 1);
