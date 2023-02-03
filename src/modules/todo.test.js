@@ -108,4 +108,25 @@ describe('clear all completed', () => {
     // Assert
     expect(newUpdatedArr).toHaveLength(2);
   });
+
+test('clear all completed tasks in DOM', () => {
+    // Arrange
+    document.body.innerHTML = `
+    <div>
+      <ul id="taskList">
+        <li id="1" class='completed'></li>
+        <li id="2" class='completed'></li>
+        <li id="3"></li>
+        <li id="4"></li>
+      </ul>
+    </div>
+    `;
+    // Act
+    const taskList = document.querySelectorAll('#taskList li');
+    removeAllCompletedFromDOM(taskList);
+    // Assert
+    const remainList = document.querySelectorAll('#taskList li');
+    expect(remainList).toHaveLength(2);
+  });
+
 });
