@@ -30,3 +30,14 @@ describe('delet task', () => {
     expect(taskList).toHaveLength(0);
   });
 });
+
+// test for edit
+it('task element to be updated is being sent', () => {
+  // Arrange
+  const taskArr = [{ description: 'test', completed: false, index: 1 }];
+  //  Act
+  const testArray = Todo.updateTodo(task);
+  //  Assert
+  const { description } = testArray[0];
+  expect(description).toEqual(taskArr[0].description);
+});

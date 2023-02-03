@@ -36,6 +36,7 @@ export default class Todo {
     );
     newTodoArray.push(newTodo);
     storeData(newTodoArray);
+    return storeData(newTodoArray);
   }
 
   static removeTodo = (index) => {
