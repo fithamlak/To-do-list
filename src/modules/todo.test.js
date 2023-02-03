@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import Todo from './todo.js';
-import { appendToDOM, removeFromDOM, removeAllCompletedFromDOM  } from './changeDom.js';
+import { appendToDOM, removeFromDOM, removeAllCompletedFromDOM } from './changeDom.js';
 
 jest.mock('./localStorage.js');
 const task = new Todo('test', false, 1);
@@ -109,7 +109,7 @@ describe('clear all completed', () => {
     expect(newUpdatedArr).toHaveLength(2);
   });
 
-test('clear all completed tasks in DOM', () => {
+  test('clear all completed tasks in DOM', () => {
     // Arrange
     document.body.innerHTML = `
     <div>
@@ -128,5 +128,4 @@ test('clear all completed tasks in DOM', () => {
     const remainList = document.querySelectorAll('#taskList li');
     expect(remainList).toHaveLength(2);
   });
-
 });
