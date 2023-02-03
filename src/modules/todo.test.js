@@ -32,7 +32,7 @@ describe('delet task', () => {
 });
 
 // test for edit
-it('task element to be updated is being sent', () => {
+test('task element to be updated is being sent', () => {
   // Arrange
   const taskArr = [{ description: 'test', completed: false, index: 1 }];
   //  Act
@@ -40,4 +40,16 @@ it('task element to be updated is being sent', () => {
   //  Assert
   const { description } = testArray[0];
   expect(description).toEqual(taskArr[0].description);
+});
+
+test('Update task different description', () => {
+  //  Arrange
+  const taskArr = [
+    { description: 'other-task', completed: false, index: 1 },
+  ];
+  // Act
+  const testArray = Todo.updateTodo(task);
+  // Assert
+  const { description } = testArray[0];
+  expect(description).not.toBe(taskArr[0].description);
 });
