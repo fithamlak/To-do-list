@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675384372449" clover="3.2.0">
-  <project timestamp="1675384372449" name="All files">
+<coverage generated="1675385564498" clover="3.2.0">
+  <project timestamp="1675385564498" name="All files">
     <metrics statements="32" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="6" elements="44" coveredelements="34" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
     <file name="changeDom.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\changeDom.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -13,9 +13,9 @@
     <file name="todo.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\todo.js">
       <metrics statements="27" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="4"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="7" count="5" type="stmt"/>
-      <line num="8" count="5" type="stmt"/>
-      <line num="9" count="5" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="9" count="6" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
       <line num="13" count="0" type="stmt"/>
       <line num="14" count="0" type="stmt"/>
@@ -26,12 +26,12 @@
       <line num="25" count="1" type="stmt"/>
       <line num="26" count="1" type="stmt"/>
       <line num="29" count="1" type="stmt"/>
-      <line num="30" count="3" type="stmt"/>
-      <line num="31" count="3" type="stmt"/>
-      <line num="32" count="3" type="stmt"/>
-      <line num="37" count="3" type="stmt"/>
-      <line num="38" count="3" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
+      <line num="30" count="4" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="32" count="4" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
       <line num="42" count="1" type="stmt"/>
       <line num="43" count="1" type="stmt"/>
       <line num="44" count="1" type="stmt"/>

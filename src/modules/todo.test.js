@@ -63,3 +63,23 @@ describe('Edit task description', () => {
     expect(description).toBe('updatedDescription');
   });
 });
+
+// test for completion update using check box
+describe('edit task completion using  checkbox', () => {
+  it('edits a task checkbox in local storage', () => {
+    // Arrange
+    const completedTask = { ...task };
+    completedTask.completed = true;
+
+    // Act
+    const modifiedArray = Todo.updateTodo(completedTask);
+    const completedTaskArray = modifiedArray.filter(
+      (e) => e.index === completedTask.index,
+    );
+    const { completed } = completedTaskArray[0];
+
+    // Assert
+    expect(completed).toBeTruthy();
+    expect(completed).not.toBeFalsy();
+  });
+});
