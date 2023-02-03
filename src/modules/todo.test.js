@@ -32,34 +32,34 @@ describe('delet task', () => {
 });
 
 // test for edit
-test('task element to be updated is being sent', () => {
-  // Arrange
-  const taskArr = [{ description: 'test', completed: false, index: 1 }];
-  //  Act
-  const testArray = Todo.updateTodo(task);
-  //  Assert
-  const { description } = testArray[0];
-  expect(description).toEqual(taskArr[0].description);
-});
+describe('Edit task description', () => {
+  test('task element to be updated is being sent', () => {
+    // Arrange
+    const taskArr = [{ description: 'test', completed: false, index: 1 }];
+    //  Act
+    const testArray = Todo.updateTodo(task);
+    //  Assert
+    const { description } = testArray[0];
+    expect(description).toEqual(taskArr[0].description);
+  });
 
-test('Update task different description', () => {
-  //  Arrange
-  const taskArr = [
-    { description: 'other-task', completed: false, index: 1 },
-  ];
-  // Act
-  const testArray = Todo.updateTodo(task);
-  // Assert
-  const { description } = testArray[0];
-  expect(description).not.toBe(taskArr[0].description);
-});
+  test('Update task different description', () => {
+    //  Arrange
+    const taskArr = [
+      { description: 'other-description', completed: false, index: 1 },
+    ];
+    // Act
+    const testArray = Todo.updateTodo(task);
+    // Assert
+    const { description } = testArray[0];
+    expect(description).not.toBe(taskArr[0].description);
+  });
 
-it('task description is updated', () => {
-  //  Arrange
-  // const task = new Todo('updatedDescription', false, 1);
-  // Act
-  const testArray = Todo.updateTodo({ description: 'updatedDescription', completed: false, index: 1 });
-  // Assert
-  const { description } = testArray[0];
-  expect(description).toBe('updatedDescription');
+  test('task description is updated', () => {
+    // Act
+    const testArray = Todo.updateTodo({ description: 'updatedDescription', completed: false, index: 1 });
+    // Assert
+    const { description } = testArray[0];
+    expect(description).toBe('updatedDescription');
+  });
 });

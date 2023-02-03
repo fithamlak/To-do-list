@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675383857241" clover="3.2.0">
-  <project timestamp="1675383857241" name="All files">
+<coverage generated="1675384372449" clover="3.2.0">
+  <project timestamp="1675384372449" name="All files">
     <metrics statements="32" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="6" elements="44" coveredelements="34" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
     <file name="changeDom.js" path="D:\Microverse\module-2\block-3\unit-test-pair-programming\To-do-list\src\modules\changeDom.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
